@@ -1,0 +1,31 @@
+---
+import { SITE_TITLE } from '../consts';
+---
+<div id="init">
+    <h1>{SITE_TITLE}</h1>
+</div>
+<div id="greek-key"></div>
+<style>
+#init {
+        background-color: white;
+        padding: 3em 0 2em 0;
+        justify-items: center;
+        text-align: center;
+        font-size: 1.5em;
+    }
+#greek-key {
+        background-image: url("/Greek-Key.png");
+        width: 100%;
+        height: 1.5em;
+        background-size: contain;
+    }
+    @media (max-width: 768px){
+        #init{
+            display: flex;
+            height: 200px;
+            font-size: 0.7em;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+</style>

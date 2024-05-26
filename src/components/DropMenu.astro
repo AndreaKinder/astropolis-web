@@ -1,0 +1,62 @@
+---
+import HeaderLink from './HeaderLink.astro';
+interface Props {
+    title_menu: string;
+    link1: string;
+    link2: string;
+    link3: string;
+}
+
+const { title_menu, link1, link2, link3 } = Astro.props;
+---
+<style>
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+
+    .dropdown-content {
+        display: none;
+        position: absolute;
+        background-color: white;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+
+    .dropdown-content a {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+    }
+
+    .dropdown-content a:hover {
+        background-color: #f1f1f1;
+    }
+
+    .dropdown:hover .dropdown-content {
+        display: block;
+    }
+
+    .dropbtn {
+        padding: 1em 0.5em;
+        color: var(--black);
+        border: none;
+        background: none;
+        cursor: pointer;
+        font-size: 0.6em;
+    }
+    .dropbtn{
+        font-family: 'Times New Roman', Times, serif;
+    }
+</style>
+
+<div class="dropdown">
+    <button class="dropbtn">{title_menu}</button>
+    <div class="dropdown-content">
+        <HeaderLink>{link1}</HeaderLink>
+        <HeaderLink>{link2}</HeaderLink>
+        <HeaderLink>{link3}</HeaderLink>
+    </div>
+</div>

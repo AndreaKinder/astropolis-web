@@ -1,0 +1,62 @@
+---
+import LogoAstro from "../../public/Logo-astro.svg?raw";
+---
+
+<header id="header">
+    <nav>
+            <Fragment set:html={LogoAstro} />
+        <div class="internal-links">
+        </div>
+    </nav>
+</header>
+<style>
+    header {
+        font-family: 'Times New Roman', Times, serif;
+        position: fixed;
+        width: 100%;
+        margin: 0;
+        background-color: white;
+        box-shadow: 0 2px 8px rgba(var(--black), 5%);
+        transition: all 0.3s ease;
+    }
+   
+    nav {
+        padding: 0 3em;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    nav a {
+        padding: 1em 0.5em;
+        color: var(--black);
+        border-bottom: 4px solid transparent;
+        text-decoration: none;
+    }
+    nav a.active {
+        text-decoration: none;
+        border-bottom-color: var(--accent);
+    }
+    @media (max-width: 720px) {
+        .social-links {
+            display: none;
+        }
+    }
+    .header-small {
+        padding: 0;
+        background: rgba(255, 255, 255, 0.8);
+        box-shadow: 0 2px 8px rgba(var(--black), 10%);
+        height: 2.7em;
+        align-items: center;
+    }
+    .header-small h1 {
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        font-size: 0.5em;
+    }
+    .header-small nav button {
+        font-size: 0.7em;
+    }
+    .header-small h2 {
+        font-size: 0.1em;
+    }
+</style>
