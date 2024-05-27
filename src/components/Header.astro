@@ -1,11 +1,14 @@
 ---
 import LogoAstro from "../../public/Logo-astro.svg?raw";
+import DropMenu from "./DropMenu.astro";
 ---
 
 <header id="header">
     <nav>
             <Fragment set:html={LogoAstro} />
         <div class="internal-links">
+            <DropMenu title_menu="Inicio" link1="1" link2="2" link3="3"/>
+            <DropMenu title_menu="Contenido" link1="1" link2="2" link3="3" />
         </div>
     </nav>
 </header>
