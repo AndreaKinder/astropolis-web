@@ -5,9 +5,15 @@ interface Props {
     link1: string;
     link2: string;
     link3: string;
+    link4: string;
+    link5: string;
+    link6: string;
+    link7: string;
+    link8: string;
+    link9: string;
 }
 
-const { title_menu, link1, link2, link3 } = Astro.props;
+const { title_menu, link1, link2, link3, link4, link5, link6, link7, link8, link9 } = Astro.props;
 ---
 <style>
     .dropdown {
@@ -16,28 +22,31 @@ const { title_menu, link1, link2, link3 } = Astro.props;
     }
 
     .dropdown-content {
-        display: none;
-        position: absolute;
-        background-color: white;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
+    display: none;
+    position: absolute;
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    flex-direction: row; /* Cambia esto */
+    flex-wrap: wrap; /* Añade esto para permitir que los elementos se envuelvan si no caben en una sola línea */
+}
 
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    flex: 1 0 auto; /* Añade esto para permitir que los elementos se ajusten al espacio disponible */
+}
     .dropdown-content a:hover {
         background-color: #f1f1f1;
     }
 
     .dropdown:hover .dropdown-content {
-        display: block;
-    }
+    display: flex;
+    gap: 0.5em;
+}
 
     .dropbtn {
         padding: 1em 0.5em;
@@ -57,5 +66,12 @@ const { title_menu, link1, link2, link3 } = Astro.props;
         <HeaderLink>{link1}</HeaderLink>
         <HeaderLink>{link2}</HeaderLink>
         <HeaderLink>{link3}</HeaderLink>
+        <HeaderLink>{link4}</HeaderLink>
+        <HeaderLink>{link5}</HeaderLink>
+        <HeaderLink>{link6}</HeaderLink>
+        <HeaderLink>{link7}</HeaderLink>
+        <HeaderLink>{link8}</HeaderLink>
+        <HeaderLink>{link9}</HeaderLink>
+    </div>
     </div>
 </div>

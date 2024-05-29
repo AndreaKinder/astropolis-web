@@ -3,21 +3,9 @@
 ---
 <div class="banner-container">
     <div class="banner">
-        <div class="slide">
-            <div class="container-h2">
-                <h2>Carta natal reserva cita</h2>
-            </div> 
-        </div>
-        <div class="slide">
-            <div class="container-h2">
-                <h2>Aprendizaje Astrológico</h2>
-            </div>
-        </div>
-        <div class="slide">
-            <div class="container-h2">
-                <h2>Encuentros Vivenciales</h2>
-            </div>
-        </div>
+        <div class="slide" id="carta-astral"></div>
+        <div class="slide" id="aprendizage-astro"></div>
+        <div class="slide" id="ecuentros"></div>
     </div>
 </div>
 <style>
@@ -30,6 +18,7 @@
     position: relative;
 }
 .banner {
+    z-index: 2;
     display: flex;
     width: 300%;
     height: 100%;
@@ -37,6 +26,7 @@
     background-position: center;
 }
 .slide {
+    z-index: 1;
     width: 100%;
     height: 100%;
     display: flex;
@@ -44,20 +34,25 @@
     justify-content: center;
     align-items: center;
     font-size: 1.5rem;
-    background-image: url(/public/Fondo-Option1.jpeg);
     animation: horizontal-scroll 8s ease-in-out infinite;
 }
-.container-h2{
-    background-color: gainsboro;
-    padding: 2em 4em;
-    /*border-radius: 10px;*/
-    border: black 1px solid;
-}
-h2{
-    color: black;
-    font-family: 'Times New Roman', Times, serif;
+#carta-astral, #aprendizage-astro, #ecuentros {
+    background-repeat: no-repeat; /* Evita que la imagen de fondo se repita */
+    background-size: cover; /* Hace que la imagen de fondo cubra todo el contenedor */
+    background-position: center; /* Centra la imagen de fondo en el contenedor */
 }
 
+#carta-astral {
+    background-image: url(/public/carta-astral.jpg);
+}
+
+#aprendizage-astro {
+    background-image: url(/public/astro-dec.jpg);
+}
+
+#ecuentros {
+    background-image: url(/public/encuentros-vivientes.jpg);
+}
 @keyframes horizontal-scroll {
     0%, 20% {
         transform: translate3d(0, 0, 0);
