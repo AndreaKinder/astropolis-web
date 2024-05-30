@@ -61,8 +61,8 @@ const { title_menu, link1, link2, link3, link4, link5, link6, link7, link8, link
 </style>
 
 <div class="dropdown">
-    <button class="dropbtn">{title_menu}</button>
-    <div class="dropdown-content">
+    <button class="dropbtn" popovertarget="my-popover">{title_menu}</button>    
+    <div popover id="my-popover" class="dropdown-content">
         <HeaderLink>{link1}</HeaderLink>
         <HeaderLink>{link2}</HeaderLink>
         <HeaderLink>{link3}</HeaderLink>
