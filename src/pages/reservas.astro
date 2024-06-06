@@ -50,23 +50,28 @@ import ServicioReserva from "../components/servicio-reserva.astro";
     <div class="container px-4 py-5" id="custom-cards">
         <h2 class="pb-2">Opciones de Reserva</h2>
         <div class="accordion" id="accordionExample">
+          <!--Carta Natal -->
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 CARTA NATAL
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
                 <p>Una carta natal es una representación gráfica de la posición de los planetas en el momento exacto del nacimiento de una persona. </p>
                 <p>Esta herramienta se utiliza en la astrología para interpretar la sincronía que los cuerpos celestes tienen en la personalidad, los eventos y el destino de un individuo o del colectivo.</p>
                 <p>Para elaborar una carta natal, se necesita conocer la fecha, la hora exacta* y el lugar exactos del nacimiento de la persona. </p>
                 <p>A partir de esta información, se calcula la posición de los planetas, el Sol y la Luna en los signos zodiacales y en las diferentes casas astrológicas. Cada planeta y cada casa representan diferentes aspectos de la personalidad y de la vida de la persona.</p>
-                <p><strong>Duración</strong>1h 40min</p>
-                <p><strong>Precio</strong>90,00€</p>
-                <!--TODO Botones pertinentez -->
+                <p><strong>Duración: </strong>1h 40min</p>
+                <p><strong>Precio: </strong>90,00€</p>
+                <div class="row"></div>
+                  <button type="button" class="btn btn-light col-6 border">Pide Cita</button>
+                  <button type="button" class="btn btn-light col-5 border">Solicitar Certificado de nacimiento</button>
+              </div>
             </div>
           </div>
+          <!--Sesión de Astrología -->
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
@@ -75,10 +80,21 @@ import ServicioReserva from "../components/servicio-reserva.astro";
             </h2>
             <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-               <p><strong>Precio</strong>45€</p>
+                <p><strong>Duración: </strong>50 min</p>
+               <p><strong>Precio: </strong>45€</p> 
+               <ul class="list-group">
+                <li class="list-group-item">Carta Natal Breve</li>
+                <li class="list-group-item">Tránsitos Planetarios</li>
+                <li class="list-group-item">Retorno Solar</li>
+                <li class="list-group-item">Retornos Lunares</li>
+                <li class="list-group-item">Astrología Dracónica</li>
+                <li class="list-group-item">Astrología Electiva</li>
+                <li class="list-group-item">Astrología Empresarial</li>
+              </ul>
               </div>
             </div>
           </div>
+          <!--Astrología Vincular -->
           <div class="accordion-item">
             <h2 class="accordion-header">
               <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
@@ -87,19 +103,33 @@ import ServicioReserva from "../components/servicio-reserva.astro";
             </h2>
             <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
               <div class="accordion-body">
-                
+                <ul class="list-group">
+                  <li class="list-group-item"><p></p><strong>Sinastría</strong> análisis y descripción del vínculo desde una perspectiva relacional, analizamos como interactuan entre si ambas cartas.</p></li>
+                  <li class="list-group-item"><p><strong>Carta compuesta</strong>  análisis y descripición del vínculo desde una perpectiva de unidad, analizamos como interacciona la relación con el mundo</p></li>
+                  <li class="list-group-item"><p><strong>Evolución del vínculo</strong> análisis y descripción del vinculo desde una análisis minucioso del recorrido vincular, teniendo en cuenta los tránsitos y direcciones que recibe tanto la sinastria como la carta compuesta.
+                    Nos ayuda a comprender los diferentes momentos y etapas por las que transcurre un vínculo determinado.</p></li>
+              </ul>
               </div>
             </div>
           </div>
+          <!--Rectificación de la Hora de Nacimiento -->
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
                 RECTIFICACIÓN DE LA HORA DE NACIMIENTO
               </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
-              <div class="accordion-body">
-                
+            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+             <div class="accordion-body">
+                <p>La rectificación de la hora de nacimiento es un proceso en la astrología utilizado cuando la hora exacta de nacimiento de una persona es desconocida o incierta. En muchos casos, la hora registrada puede no ser precisa debido a diversos factores, como errores humanos, discrepancias entre relojes, o simplemente porque no se tomó nota en el momento.</p>
+                <p>Durante la rectificación, se trabaja con la persona para recopilar información sobre eventos significativos en su vida, como matrimonios, cambios de trabajo, mudanzas, entre otros, para intentar determinar la hora más precisa posible de su nacimiento.</p>
+                <p>Este proceso implica analizar patrones astrológicos y correlacionarlos con eventos importantes en la vida del individuo.</p>
+                <p>La rectificación de la hora de nacimiento puede ser un desafío y requiere habilidades y experiencia profesional.</p>
+                <p>Sin embargo, cuando se hace con precisión, puede proporcionar una base más sólida para una interpretación precisa de la carta natal y una comprensión más profunda de la persona y su destino.</p>
+                <p><strong>Duración:</strong>El tiempo aproximado de entrega de una rectificación es de 2 semanas. Este tiempo se puede extender o acortar dependiendo de la diferencia con la hora real de nacimiento, a mayor distancia mayor complejidad para dar con la hora exacta</p>
+                <p>Para realizar correctamente una rectificación de la hora de Nacimiento es necesario disponer de la hora que aparece registrada o en su defecto de la hora aproximada de la que se tenga conocimiento, además de un listado de mínimo 10 eventos significativos ocurridos en diferentes momentos y áreas de la vida de la persona.</p>
+                <p>No se recomienda rectificar la hora de nacimiento cuando hay una diferencia de mas de una hora entre la hora conocida y la hora real de nacimiento, ya que los cálculos pueden generar distorsión y dificultar la búsqueda de la hora </p>
+                <p></p><strong>Precio: </strong>90,00€</p>
               </div>
             </div>
           </div>
