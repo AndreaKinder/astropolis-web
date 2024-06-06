@@ -1,0 +1,26 @@
+---
+interface Props {
+    title: string;
+    text1: string;
+    text2: string;
+    text3: string;
+    duration: string;
+    precio: number;
+}
+
+const { title, text1, text2, text3, duration, precio} = Astro.props
+---
+
+<div class="px-4 py-5 my-5 text-center">
+    <img class="d-block mx-auto mb-4" src="/Logo-astro.svg" alt="" width="72" height="57">
+    <h1 class="display-5 fw-bold text-body-emphasis">{title}</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">{text1}</p>
+      <p class="lead mb-4">{text2}</p>
+      <p class="lead mb-4">{text3}</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+        <div><span>Duracion</span><p>{duration}</p></div>
+        <div><span>Duracion</span><p>{precio}</p></div>
+      </div>
+    </div>
+  </div>

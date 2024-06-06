@@ -1,122 +1,29 @@
 ---
 
 ---
-<div class="banner-container">
-    <div class="banner">
-        <div class="slide" id="carta-astral"></div>
-        <div class="slide" id="aprendizage-astro"></div>
-        <div class="slide" id="ecuentros"></div>
+<div id="carouselExampleIndicators" class="carousel slide">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
     </div>
-</div>
-<style>
-.banner-container {
-    width: 100%;
-    height: 20em;
-    overflow: hidden;
-    border: 1px solid #ccc;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    position: relative;
-}
-.banner {
-    z-index: 2;
-    display: flex;
-    width: 300%;
-    height: 100%;
-    background-size: cover;
-    background-position: center;
-}
-.slide {
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem;
-    animation: horizontal-scroll 8s ease-in-out infinite;
-}
-
-#carta-astral, #aprendizage-astro, #ecuentros {
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-}
-
-#carta-astral {
-    background-image: url(/carta-astral.jpg);
-}
-
-#aprendizage-astro {
-    background-image: url(/astro-dec.jpg);
-}
-
-#ecuentros {
-    background-image: url(/encuentros-vivientes.jpg);
-}
-@keyframes horizontal-scroll {
-    0%, 20% {
-        transform: translate3d(0, 0, 0);
-    }
-    25%, 45% {
-        transform: translate3d(-100%, 0, 0);
-    }
-    50%, 70% {
-        transform: translate3d(-200%, 0, 0);
-    }
-    75%, 100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
-
-@media (max-width: 900px) {
-    .banner-container {
-        height: 17em;
-    }
-
-    #carta-astral, #aprendizage-astro, #ecuentros {
-        background-position: top;
-    }
-}
-
-@media (max-width: 700px) {
-    .banner-container {
-        height: 12em;
-    }
-
-    #carta-astral, #aprendizage-astro, #ecuentros {
-        background-position: top;
-    }
-}
-
-@media (max-width: 600px) {
-    .banner-container {
-        height: 10em;
-    }
-
-    #carta-astral, #aprendizage-astro, #ecuentros {
-        background-position: top;
-    }
-}
-
-@media (max-width: 500px) {
-    .banner-container {
-        height: 8em;
-    }
-
-    #carta-astral, #aprendizage-astro, #ecuentros {
-        background-position: top;
-    }
-}
-
-@media (max-width: 350px) {
-    .banner-container {
-        height: 5em;
-    }
-
-    #carta-astral, #aprendizage-astro, #ecuentros {
-        background-position: top;
-    }
-}
-
-</style>
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="/carta-astral.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/encuentros-vivientes.jpg" class="d-block w-100" alt="...">
+      </div>
+      <div class="carousel-item">
+        <img src="/astro-dec.jpg" class="d-block w-100" alt="...">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
