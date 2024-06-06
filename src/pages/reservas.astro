@@ -22,22 +22,29 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
                 </div>
             </div> 
     <!--Explicacion del Mail de Confirmacion -->
-            <div class="container col-12">
-                <h3 class="text-center fs-3 p-5">Una vez realizada la reserva recibirás un @Email de confirmación</h3>
-                <div class="row">
-                    <div class="col-5 text-center border p-2">
-                        <p>
-                            Si es tu primer acercamiento a la astrología es recomendable la sesión de Carta natal, al tener una mayor duración facilita mayor profundidad e información.
-                        </p>
-                    </div>
-                    <dir class="col-2"></dir>
-                    <div class="col-5 text-center border p-2">
-                        <p>
-                            Si ya conoces tu Carta natal y sientes interés en una información determinada, es tu retorno solar, un momento de cambios, enfoque o proyecto la sesión de 50 minutos es la mas adecuada.
-                        </p>
-                    </div>
-                </div>    
+    <div class="container col-12">
+      <h3 class="text-center fs-3 p-5">Una vez realizada la reserva recibirás un @Email de confirmación</h3>
+      <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-5">
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden rounded-4 shadow-sm bg-body">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <p class="fs-sm">
+                Si es tu primer acercamiento a la astrología es recomendable la sesión de Carta natal, al tener una mayor duración facilita mayor profundidad e información.
+              </p>
             </div>
+          </div>
+        </div>
+        <div class="col">
+          <div class="card card-cover h-100 overflow-hidden rounded-4 shadow-sm bg-body">
+            <div class="d-flex flex-column h-100 p-5 pb-3 text-shadow-1">
+              <p class="fs-sm">
+                Si ya conoces tu Carta natal y sientes interés en una información determinada, es tu retorno solar, un momento de cambios, enfoque o proyecto la sesión de 50 minutos es la mas adecuada.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
     <!--Opciones de Reserva -->
     <div class="container px-4 py-5" id="custom-cards">
         <h2 class="pb-2">Opciones de Reserva</h2>
@@ -47,7 +54,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
           <div class="col">
             <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-sm bg-body">
               <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-3">CARTA NATAL</h3>
+                <h3 class="pt-5 pb-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-3">CARTA NATAL</h3>
               </div>
             </div>
           </div>
@@ -55,7 +62,7 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
             <div class="col">
               <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-sm bg-body">
                 <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                  <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-3">SESIÓN DE ASTROLOGÍA</h3>
+                  <h3 class="pt-5 pb-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-3">SESIÓN DE ASTROLOGÍA</h3>
                 </div>
               </div>
             </div>
@@ -63,21 +70,23 @@ import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
               <div class="col">
                 <div class="card card-cover h-100 overflow-hidden text-bg-dark rounded-4 shadow-sm bg-body">
                   <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-3">RECTIFICACIÓN DE LA HORA DE NACIMIENTO</h3>
-                  </div>
-                </div>
-              </div>
-    <!--APRENDIZAJE ASTROLÓGICO -->
-              <div class="col">
-                <div class="card card-cover h-120 overflow-hidden text-bg-dark rounded-4 shadow-sm bg-body">
-                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
-                    <h3 class="pt-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-3">APRENDIZAJE ASTROLÓGICO</h3>
+                    <h3 class="pt-5 pb-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-3">RECTIFICACIÓN DE LA HORA DE NACIMIENTO</h3>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+         
+    
+    <!--APRENDIZAJE ASTROLÓGICO -->
+              <div class="col">
+                <div class="card card-cover h-120 overflow-hidden text-bg-dark rounded-4 shadow-sm bg-body">
+                  <div class="d-flex flex-column h-100 p-5 pb-3 text-white text-shadow-1">
+                    <h3 class="pt-5 pb-5 mt-5 mb-4 display-6 lh-1 fw-bold fs-3">APRENDIZAJE ASTROLÓGICO</h3>
+                  </div>
+                </div>
+              </div>
         </div>
+            
       </div>
             <Footer />  
             </div>
