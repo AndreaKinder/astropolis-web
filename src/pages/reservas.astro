@@ -1,0 +1,47 @@
+---
+import "../styles/global.css";
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
+---
+<!doctype html>
+<html lang="es">
+    <head>
+        <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    </head>
+    <body>
+            <Header />
+    <!--Header de Presentacion -->
+            <div class="px-4 py-5 my-5 text-center bg-body">
+                <img class="d-block mx-auto mb-4" src="/Logo-astro.svg" alt="" width="72" height="57">
+                <h1 class="display-5 fw-bold text-body-emphasis">¡Hola Astropolita!</h1>
+                <div class="col-lg-6 mx-auto">
+                  <p class="lead mb-4">Reserva el mejor momento para nuestro encuentro✨</p>
+                </div>
+            </div> 
+    <!--Explicacion del Mail de Confirmacion -->
+            <div class="container col-12">
+                <h3 class="text-center fs-3 p-5">Una vez realizada la reserva recibirás un @Email de confirmación</h3>
+                <div class="row">
+                    <div class="col-5 text-center border p-2">
+                        <p>
+                            Si es tu primer acercamiento a la astrología es recomendable la sesión de Carta natal, al tener una mayor duración facilita mayor profundidad e información.
+                        </p>
+                    </div>
+                    <dir class="col-2"></dir>
+                    <div class="col-5 text-center border p-2">
+                        <p>
+                            Si ya conoces tu Carta natal y sientes interés en una información determinada, es tu retorno solar, un momento de cambios, enfoque o proyecto la sesión de 50 minutos es la mas adecuada.
+                        </p>
+                    </div>
+                </div>    
+            </div>
+    
+            <Footer />  
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    </body>
+</html>
