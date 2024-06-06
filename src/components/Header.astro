@@ -1,9 +1,10 @@
 ---
 import LogoAstro from "../../public/Logo-astro.svg?raw";
+import HeaderLink from "./HeaderLink.astro";
 ---
-<nav class="navbar bg-body-tertiary fixed-top">
+<nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#"><Fragment set:html={LogoAstro} /></a>
+      <HeaderLink href="/" class="navbar-brand" aria-current="page"><Fragment set:html={LogoAstro} /></HeaderLink>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -16,7 +17,7 @@ import LogoAstro from "../../public/Logo-astro.svg?raw";
           <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
             <!--INICIO -->
             <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="#">INICIO</a>
+              <HeaderLink href="/" class="navbar-brand" aria-current="page">INICIO</HeaderLink>
             </li>
             <!--RESERVAR CITA -->
             <li class="nav-item dropdown">

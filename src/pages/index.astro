@@ -6,8 +6,7 @@ import HeaderBanner from '../components/HeaderBanner.astro';
 import MainOptions from '../components/MainOptions.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import TextAstrology from '../components/textAstrology.astro';
-import ScriptBootstrap from "../components/scriptbootstrap.astro";
+import Definition from "../components/definition.astro";
 ---
 
 <!doctype html>
@@ -20,7 +19,11 @@ import ScriptBootstrap from "../components/scriptbootstrap.astro";
             <Header />
             <HeaderBanner />
             <MainOptions />
-            <TextAstrology />
+            <Definition 
+            title="TEXTO EXPLICATIVO SOBRE ASTROLOGÍA"
+            description="RECORRIDO EN TEXTO Y VISUAL EN EL QUE SE EXPLICA DE MANERA BREVE QUE ES LA ASTROLOGÍA Y SUS DIFERENTES USOS EN ASTRÓPOLIS"
+            imageUrl=null
+            />
             <Footer />  
             </div>
         </div>

@@ -10,8 +10,13 @@ const { title, description, imageUrl }= Astro.props;
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h1>{ title }</h1>
-            <p>{ description }</p>
+            <h1 class="fs-2 text-center">{ title }</h1>
+            <p class="text-center">{ description }</p>
         </div>
     </div>
 </div>
+<style>
+    .container {
+        padding: 50px;
+    }
+</style>

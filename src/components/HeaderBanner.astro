@@ -1,32 +1,16 @@
 ---
 import { SITE_TITLE } from '../consts';
 ---
-<div id="init">
-    <h1>{SITE_TITLE}</h1>
+ <div class="p-5 my-5 text-center">
+    <h1 class="p-5 display-1 fw-bold text-body-emphasis">{SITE_TITLE}</h1>
 </div>
-<div id="greek-key"></div>
-<style>
-#init {
-        font-family: 'Times New Roman', Times, serif;
-        background-color: white;
-        padding: 3em 0 2em 0;
-        justify-items: center;
-        text-align: center;
-        font-size: 1.5em;
-    }
-#greek-key {
+<div class="key-container">
+</div>
+  <style>
+    .key-container {
         background-image: url("/Greek-Key.png");
-        width: 100%;
         height: 1.5em;
+        width: 100%;
         background-size: contain;
     }
-    @media (max-width: 768px){
-        #init{
-            display: flex;
-            height: 200px;
-            font-size: 0.7em;
-            justify-content: center;
-            align-items: center;
-        }
-    }
-</style>
+  </style>
