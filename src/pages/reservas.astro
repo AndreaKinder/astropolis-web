@@ -49,15 +49,15 @@ import ServicioReserva from "../components/servicio-reserva.astro";
     <!--Opciones de Reserva -->
     <div class="container px-4 py-5" id="custom-cards">
         <h2 class="pb-2">Opciones de Reserva</h2>
-        <div class="accordion" id="accordionExample">
+        <div class="accordion" id="accordionReserva">
           <!--Carta Natal -->
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#CartaNatal" aria-expanded="true" aria-controls="CartaNatal">
                 CARTA NATAL
               </button>
             </h2>
-            <div id="collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="CartaNatal" class="accordion-collapse collapse" data-bs-parent="#accordionReserva">
               <div class="accordion-body">
                 <p>Una carta natal es una representación gráfica de la posición de los planetas en el momento exacto del nacimiento de una persona. </p>
                 <p>Esta herramienta se utiliza en la astrología para interpretar la sincronía que los cuerpos celestes tienen en la personalidad, los eventos y el destino de un individuo o del colectivo.</p>
@@ -74,11 +74,11 @@ import ServicioReserva from "../components/servicio-reserva.astro";
           <!--Sesión de Astrología -->
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#SAstrologia" aria-expanded="false" aria-controls="SAstrologia">
                 SESIÓN DE ASTROLOGÍA
               </button>
             </h2>
-            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="SAstrologia" class="accordion-collapse collapse" data-bs-parent="#accordionReserva">
               <div class="accordion-body">
                 <p><strong>Duración: </strong>50 min</p>
                <p><strong>Precio: </strong>45€</p> 
@@ -97,11 +97,11 @@ import ServicioReserva from "../components/servicio-reserva.astro";
           <!--Astrología Vincular -->
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#AVincular" aria-expanded="false" aria-controls="AVincular">
                 ASTROLOGÍA VINCULAR
               </button>
             </h2>
-            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="AVincular" class="accordion-collapse collapse" data-bs-parent="#accordionReserva">
               <div class="accordion-body">
                 <ul class="list-group">
                   <li class="list-group-item"><p></p><strong>Sinastría</strong> análisis y descripción del vínculo desde una perspectiva relacional, analizamos como interactuan entre si ambas cartas.</p></li>
@@ -133,6 +133,62 @@ import ServicioReserva from "../components/servicio-reserva.astro";
               </div>
             </div>
           </div>
+          <!--APRENDIZAJE ASTROLÓGICO -->
+          <div class="accordion-item">
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                APRENDIZAJE ASTROLÓGICO
+              </button>
+            </h2>
+            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#AcordAA">
+              <div class="accordion-body">
+                <p>En nuestra Sección de Aprendizaje Astrológico, tienes la oportunidad de aprender exactamente lo que deseas, a tu propio ritmo y según tus intereses, a través de consultas privadas personalizadas.</p>
+                <!--Opciones de Aprendizage astrologico -->
+                <div class="accordion" id="AcordAA">
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#AD" aria-expanded="true" aria-controls="#AD">
+                        Aprendizaje a Demanda
+                      </button>
+                    </h2>
+                    <div id="AD" class="accordion-collapse collapse show" data-bs-parent="#AcordAA">
+                      <div class="accordion-body">
+                       <p>Diseña tu propia experiencia educativa. </p>
+                       <p>Tú decides los temas astrológicos que deseas explorar, desde los fundamentos de la astrología hasta técnicas avanzadas.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#FT" aria-expanded="false" aria-controls="FT">
+                        Flexibilidad Total
+                      </button>
+                    </h2>
+                    <div id="FT" class="accordion-collapse collapse" data-bs-parent="#AcordAA">
+                      <div class="accordion-body">
+                        <p>Aprende lo que quieras, cuando quieras</p>
+                        <p>Nuestras consultas están diseñadas para adaptarse a tu horario y a tus necesidades específicas.</p>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="accordion-item">
+                    <h2 class="accordion-header">
+                      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CP" aria-expanded="false" aria-controls="CP">
+                        Consultas Personalizadas
+                      </button>
+                    </h2>
+                    <div id="CP" class="accordion-collapse collapse" data-bs-parent="#AcordAA">
+                      <div class="accordion-body">
+                          <p>Reserva una consulta privada:</p>
+                          <p>Te proporcionará orientación personalizada y te ayudará a profundizar en los temas astrológicos que más te interesen.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                </div>
+              </div>
+            </div>
         </div>
     </div>
 
