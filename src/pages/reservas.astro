@@ -4,7 +4,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import ServicioReserva from "../components/servicio-reserva.astro";
 ---
 <!doctype html>
 <html lang="es">
@@ -53,7 +52,7 @@ import ServicioReserva from "../components/servicio-reserva.astro";
           <!--Carta Natal -->
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#CartaNatal" aria-expanded="true" aria-controls="CartaNatal">
+              <button id="CartaNatalH2" class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#CartaNatal" aria-expanded="true" aria-controls="CartaNatal">
                 CARTA NATAL
               </button>
             </h2>
@@ -74,7 +73,7 @@ import ServicioReserva from "../components/servicio-reserva.astro";
           <!--Sesión de Astrología -->
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#SAstrologia" aria-expanded="false" aria-controls="SAstrologia">
+              <button class="accordion-button collapsed" id="SAstrologiaH2" type="button" data-bs-toggle="collapse" data-bs-target="#SAstrologia" aria-expanded="false" aria-controls="SAstrologia">
                 SESIÓN DE ASTROLOGÍA
               </button>
             </h2>
@@ -97,7 +96,7 @@ import ServicioReserva from "../components/servicio-reserva.astro";
           <!--Astrología Vincular -->
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#AVincular" aria-expanded="false" aria-controls="AVincular">
+              <button class="accordion-button collapsed" id="AVincularH2" type="button" data-bs-toggle="collapse" data-bs-target="#AVincular" aria-expanded="false" aria-controls="AVincular">
                 ASTROLOGÍA VINCULAR
               </button>
             </h2>
@@ -115,11 +114,11 @@ import ServicioReserva from "../components/servicio-reserva.astro";
           <!--Rectificación de la Hora de Nacimiento -->
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+              <button class="accordion-button collapsed" id="RectificacionH2" type="button" data-bs-toggle="collapse" data-bs-target="#Rectificacion" aria-expanded="false" aria-controls="Rectificacion">
                 RECTIFICACIÓN DE LA HORA DE NACIMIENTO
               </button>
             </h2>
-            <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionExample">
+            <div id="Rectificacion" class="accordion-collapse collapse" data-bs-parent="#accordionReserva">
              <div class="accordion-body">
                 <p>La rectificación de la hora de nacimiento es un proceso en la astrología utilizado cuando la hora exacta de nacimiento de una persona es desconocida o incierta. En muchos casos, la hora registrada puede no ser precisa debido a diversos factores, como errores humanos, discrepancias entre relojes, o simplemente porque no se tomó nota en el momento.</p>
                 <p>Durante la rectificación, se trabaja con la persona para recopilar información sobre eventos significativos en su vida, como matrimonios, cambios de trabajo, mudanzas, entre otros, para intentar determinar la hora más precisa posible de su nacimiento.</p>
@@ -136,11 +135,11 @@ import ServicioReserva from "../components/servicio-reserva.astro";
           <!--APRENDIZAJE ASTROLÓGICO -->
           <div class="accordion-item">
             <h2 class="accordion-header">
-              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" id="AprendizageH2" data-bs-target="#Aprendizage" aria-expanded="false" aria-controls="Aprendizage">
                 APRENDIZAJE ASTROLÓGICO
               </button>
             </h2>
-            <div id="collapseFive" class="accordion-collapse collapse" data-bs-parent="#AcordAA">
+            <div id="Aprendizage" class="accordion-collapse collapse" data-bs-parent="#AcordAA">
               <div class="accordion-body">
                 <p>En nuestra Sección de Aprendizaje Astrológico, tienes la oportunidad de aprender exactamente lo que deseas, a tu propio ritmo y según tus intereses, a través de consultas privadas personalizadas.</p>
                 <!--Opciones de Aprendizage astrologico -->
@@ -224,6 +223,7 @@ import ServicioReserva from "../components/servicio-reserva.astro";
                         <strong>Aprendizaje Profundo:</strong>
                         <p>Profundiza en los temas astrológicos que más te interesen con ayuda experta.</p>
                         <strong>Flexibilidad y Comodidad:</strong>
+    
                         <p>Aprende a tu propio ritmo y según tu propio horario.</p>
                       </div>
                     </div>
@@ -234,11 +234,39 @@ import ServicioReserva from "../components/servicio-reserva.astro";
             </div>
         </div>
     </div>
+    
     </div>
       </div>
             <Footer />  
       </div>
         </div>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    </body>
+      <script>
+        var LocationActual = window.location;
+        if (LocationActual.pathname != "/reservas") {  
+          var hash = LocationActual.hash;
+          console.log(LocationActual.hash);
+          var id = LocationActual.hash.substring(1);
+          switch (LocationActual.hash == hash) {
+          case hash == "#CartaNatalH2":
+            document.getElementById("CartaNatal").classList.toggle('show');
+            break;
+          case hash == "#SAstrologiaH2":
+            document.getElementById("SAstrologia").classList.toggle('show'); 
+            break;
+          case hash == "#AVincularH2":
+            document.getElementById("AVincular").classList.toggle('show');
+            break;
+          case hash == "#RectificacionH2":
+            document.getElementById("Rectificacion").classList.toggle('show');
+            break;
+          case hash == "#AprendizageH2":
+            document.getElementById("Aprendizage").classList.toggle('show');
+            break;
+            
+        default:
+          break;
+      }}
+      </script>
+      </body>
 </html>

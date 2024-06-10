@@ -21,13 +21,14 @@ import HeaderLink from "./HeaderLink.astro";
             </li>
             <!--RESERVAR CITA -->
             <li class="nav-item dropdown">
-              <HeaderLink href="/reservas" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">RESERVAR CITA</HeaderLink>
+              <HeaderLink href="/reservas/#CartaNatal" class="nav-link dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">RESERVAR CITA</HeaderLink>
               <ul class="dropdown-menu">
                 <li><HeaderLink href="/reservas" class="dropdown-item">INICIO</HeaderLink></li>
-                <li><a class="dropdown-item" href="#">SESIÓN DE ASTROLOGÍA</a></li>
-                <li><a class="dropdown-item" href="#">ASTROLOGÍA VINCULAR</a></li>
-                <li><a class="dropdown-item" href="#">RECTIFICACIÓN HORA DE NACIMIENTO</a></li>
-                <li><a class="dropdown-item" href="#">APRENDIZAJE ASTROLÓGICO</a></li>
+                <li><a href="/reservas/#CartaNatalH2" id="ButtonCartaNatal" class="dropdown-item">CARTA NATAL</a></li>
+                <li><a class="dropdown-item" id="astrologSesionLink" href="/reservas/#SAstrologiaH2">SESIÓN DE ASTROLOGÍA</a></li>
+                <li><a class="dropdown-item" href="/reservas/#AVincularH2">ASTROLOGÍA VINCULAR</a></li>
+                <li><a class="dropdown-item" href="/reservas/#RectificacionH2">RECTIFICACIÓN HORA DE NACIMIENTO</a></li>
+                <li><a class="dropdown-item" href="/reservas/#AprendizageH2">APRENDIZAJE ASTROLÓGICO</a></li>
               </ul>
             </li>
             <!--SOBRE LA ASTROLOGIA -->
@@ -67,5 +68,4 @@ import HeaderLink from "./HeaderLink.astro";
         </div>
       </div>
     </div>
-    <!--TODO Hacer un form integrado en el menu en acceso premium -->
 </nav>
